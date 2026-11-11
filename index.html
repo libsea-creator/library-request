@@ -2,8 +2,77 @@
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>고3 학교도서관 이용 신청</title>
 <style>
 :root{font-family:Pretendard,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:#183047;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}.wrap{max-width:1020px;margin:auto;padding:24px 16px 70px}header{background:linear-gradient(125deg,#123c60,#246b83);color:white;padding:30px 0}header .wrap{padding-top:0;padding-bottom:0}h1{font-size:clamp(24px,4vw,34px);margin:8px 0}header p{color:#d8eaf2;margin:0}.tag{font-size:12px;background:#ffffff25;border:1px solid #ffffff50;border-radius:50px;padding:5px 10px}.tabs{display:flex;gap:8px;margin:24px 0}.tabs button{flex:1;padding:14px;border:1px solid #d5e0e8;border-radius:12px;background:white;color:#31506b;font-weight:700;cursor:pointer}.tabs button.active{background:#164d70;color:white}.panel{background:white;border:1px solid #dfe7ef;border-radius:18px;padding:24px;box-shadow:0 6px 22px #193f6010;margin-bottom:16px}h2{margin:0 0 8px;font-size:22px}h3{margin:0 0 14px;font-size:17px}.muted,.help{color:#62768a}.help{font-size:13px;margin:7px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.full{grid-column:1/-1}label{display:block;font-size:14px;font-weight:700;margin-bottom:7px}input,select,textarea{width:100%;border:1px solid #cbd8e4;border-radius:10px;padding:12px;font:inherit;background:white;color:#173149}textarea{min-height:155px;resize:vertical}button{font:inherit}.btn{background:#176489;color:white;border:0;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer}.btn.secondary{background:#e8f1f6;color:#175171}.btn.danger{background:#b43d48}.btn:disabled{opacity:.5;cursor:not-allowed}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.notice{border-radius:10px;padding:12px 14px;background:#eef6fc;color:#21506c;margin:14px 0;line-height:1.6}.notice.error{background:#fff0ef;color:#9a2832}.notice.success{background:#eaf8f0;color:#146b44}.hidden{display:none!important}.periods{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}.period{border:1px solid #cbd8e4;border-radius:10px;padding:10px 5px;text-align:center;background:#fff;cursor:pointer;font-size:13px}.period.selected{border-color:#176489;background:#e8f4fb}.period small{display:block;color:#60758a;margin-top:4px}.period.fullcap{opacity:.45}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.stat{background:#f1f6fa;border-radius:12px;padding:14px}.stat b{display:block;font-size:25px;margin-top:4px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px;white-space:nowrap}th,td{text-align:left;padding:11px;border-bottom:1px solid #e6edf2}th{background:#f3f7fa}table button{border:0;border-radius:7px;background:#fee9ea;color:#9a2832;padding:6px 10px;cursor:pointer}.pill{display:inline-block;background:#eaf4f9;border-radius:20px;padding:4px 10px;font-size:12px}footer{text-align:center;color:#738596;font-size:12px;padding:16px}@media(max-width:640px){.grid{grid-template-columns:1fr}.periods{grid-template-columns:repeat(4,1fr)}.panel{padding:17px}.stats{gap:6px}.stat{padding:10px}.stat b{font-size:21px}}
+
+/* Sage Green theme — presentation only; application logic unchanged */
+:root{color:#263e34;background:#f3f7f2}
+body{background:#f3f7f2}
+header{background:linear-gradient(125deg,#315c50,#83a895)}
+header p{color:#edf7ef}
+header .tag{background:#ffffff22;border-color:#ffffff70}
+.tabs button{border-color:#d5e3d8;color:#426454;background:#fff}
+.tabs button.active{background:#315c50;border-color:#315c50;color:#fff}
+.panel{border-color:#dbe8dc;box-shadow:0 6px 22px #244c3610}
+.muted,.help{color:#667d70}
+input,select,textarea{border-color:#c7d9cb;color:#263e34}
+input:focus,select:focus,textarea:focus{outline:2px solid #83a895;outline-offset:1px}
+.btn{background:#396e5b;color:white}
+.btn.secondary{background:#e5f0e7;color:#315c50}
+.btn.danger{background:#a84646}
+.notice{background:#e9f3e9;color:#315c50}
+.notice.error{background:#fff0ef;color:#9a2832}
+.notice.success{background:#e3f3e7;color:#246844}
+.period{border-color:#c7d9cb;background:#fff;color:#263e34}
+.period.selected{border-color:#396e5b;background:#e2f0e6}
+.period small{color:#667d70}
+.stat{background:#edf4ed}
+th{background:#edf4ed}
+th,td{border-bottom-color:#e1eae2}
+.pill{background:#e2f0e6;color:#315c50}
+footer{color:#6f8676}
+
+/* Readability update: black body/interface text; heading stays forest green */
+:root{color:#111111}
+header{background:linear-gradient(125deg,#e5f0e7,#b7d4c1);color:#111111}
+header h1{color:#315c50}
+header p,header .tag{color:#111111}
+header .tag{background:#ffffff85;border-color:#7caa8d}
+.tabs button,.tabs button.active{color:#111111}
+.tabs button.active{background:#b7d8c2;border-color:#396e5b}
+.muted,.help,label,input,select,textarea,.period,.period small,.pill,footer{color:#111111}
+.btn,.btn.secondary{color:#111111;background:#c8e2cf}
+.btn.secondary{background:#e5f0e7}
+.btn.danger{background:#f1c9c9;color:#111111}
+.notice,.notice.error,.notice.success{color:#111111}
+input::placeholder,textarea::placeholder{color:#444444}
+.stat,th,td,table button{color:#111111}
+
+/* Cool taupe brown book lounge theme: presentation only */
+:root{color:#171717;background:#F4F2F0}
+body{background:#F4F2F0;color:#171717}
+header{background:linear-gradient(125deg,#DDD7D1,#B7AAA0);color:#171717}
+header h1{color:#51443E}
+header p{color:#171717}
+header .tag{background:#FFFFFF99;border-color:#9D9087;color:#171717}
+.tabs button{border-color:#C7BDB5;background:#FFFFFF;color:#171717}
+.tabs button.active{background:#67564D;border-color:#67564D;color:#FFFFFF}
+.panel{background:#FFFFFF;border-color:#DDD5CE;box-shadow:0 6px 22px #4B403510}
+h2,h3,label,.muted,.help,footer{color:#171717}
+input,select,textarea{border-color:#C7BDB5;background:#FFFFFF;color:#171717}
+input::placeholder,textarea::placeholder{color:#626262}
+.btn{background:#67564D;color:#FFFFFF}
+.btn.secondary{background:#E8E2DD;color:#171717}
+.notice{background:#EAE5E0;color:#171717}
+.notice.error{background:#FFF0EF;color:#171717}
+.notice.success{background:#E5EEE7;color:#171717}
+.period{border-color:#D3CAC4;background:#FFFFFF;color:#171717}
+.period.selected{border-color:#67564D;background:#E5DFDA;color:#171717}
+.period small{color:#171717}
+.stat{background:#EEEAE6;color:#171717}
+th{background:#F1EDE9;color:#171717}
+th,td{border-bottom-color:#E3DBD4;color:#171717}
+.pill{background:#E5DFDA;color:#171717}
 </style></head><body>
-<header><div class="wrap"><span class="tag">고3 수능 이후 도서관 프로그램</span><h1>📚 학교도서관 이용 신청</h1><p>교시별 이용 신청 · 인원 현황 · 명단 관리</p></div></header>
+<header><div class="wrap"><span class="tag">2026학년도 11~12월 ‘책은 핑계고’ 행사</span><h1>📚 학교도서관 이용 신청</h1><p>3학년 교시별 이용 신청</p></div></header>
 <main class="wrap"><nav class="tabs"><button id="teacherTab" class="active" onclick="showTab('teacher')">선생님 신청</button><button id="adminTab" onclick="showTab('admin')">관리자</button></nav>
 <div id="connection" class="notice">스프레드시트 연결 상태를 확인하는 중입니다.</div>
 <section id="teacherPanel"><div class="panel"><h2>도서관 이용 신청</h2><p class="muted">이용 날짜와 교시, 해당 교과, 허가 교사와 학생 이름을 입력해 주세요.</p>
